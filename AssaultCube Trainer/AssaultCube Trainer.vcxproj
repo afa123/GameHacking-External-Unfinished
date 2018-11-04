@@ -23,7 +23,7 @@
     <ProjectGuid>{5A298AA9-FA6D-409F-9A2C-2BBB37358654}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>AssaultCubeTrainer</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.15063.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">

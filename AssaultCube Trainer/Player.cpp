@@ -24,6 +24,7 @@ char* name = nullptr;
 const int HEALTH_OFFSET = 0xF8;
 const int TEAM_OFFSET = 0x32C;
 const int POSITION_OFFSET = 0x34;
+const int CAMERA_OFFSET = 0x40;
 
 
 
@@ -58,6 +59,14 @@ void Player::updateInfo()
 
 	// Update Position
 	ReadProcessMemory(hProcess_, (BYTE*)baseAddress + POSITION_OFFSET, &playerPosition, sizeof(playerPosition), nullptr);
+}
+
+void Player::setCameraPosition(float x, float y, float z)
+{
+	cameraPosition[0] = x;
+	cameraPosition[1] = y;
+	cameraPosition[2] = z;
+	WriteProcessMemory(hProcess_, (BYTE*)baseAddress + CAMERA_OFFSET, &cameraPosition, sizeof(cameraPosition), nullptr);
 }
 
 void Player::printInfo()

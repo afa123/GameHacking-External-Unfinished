@@ -22,6 +22,7 @@ public:
 	Player(DWORD address, HANDLE _hProcess);
 	~Player();
 	void updateInfo();
+	void setCameraPosition(float x, float y, float z);
 	void printInfo();
 	void ErrorExit(LPTSTR lpszFunction);
 
