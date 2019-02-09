@@ -67,7 +67,7 @@ uintptr_t GetModuleBaseAddress(DWORD processID, const wchar_t* moduleName)
 	return baseAddress;
 }
 
-uintptr_t FindDynamicMemAdress(HANDLE hProcess, uintptr_t baseAddrPtr, std::vector<unsigned int> offsets)
+uintptr_t resolvePointerChain(HANDLE hProcess, uintptr_t baseAddrPtr, std::vector<unsigned int> offsets)
 {
 	uintptr_t address = baseAddrPtr;
 	for (unsigned int i = 0; i < offsets.size(); i++)
